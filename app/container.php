@@ -8,7 +8,7 @@ require __DIR__ . '/../vendor/autoload.php';
 
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/..','.env');
 $dotenv->load();
-var_dump($_ENV);
+
 $container = new Container();
 AppFactory::setContainer($container);
 $app = AppFactory::create();

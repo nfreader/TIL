@@ -11,17 +11,27 @@ use Twig\RuntimeLoader\RuntimeLoaderInterface;;
 $container->set('view', function() {
   $twig =  Twig::create(__DIR__ . '/../../views', [
     'cache' => '/tmp',
-    'debug' => TRUE
+    'debug' => DEBUG
+  ]);
+
+  $twig->getEnvironment()->addGlobal('environment', [
+    'banner'     => ENV_BANNER,
+    'env_string' => ENV_STRING,
+    'app'  => [
+      'name'    => getenv('APP_NAME'),
+      'version' => getenv('VERSION')
+    ]
   ]);
 
   $twig->addExtension(new MarkdownExtension());
+  $twig->addExtension(new \Twig\Extension\DebugExtension());
 
   $twig->addRuntimeLoader(new class implements RuntimeLoaderInterface {
-      public function load($class) {
-          if (MarkdownRuntime::class === $class) {
-              return new MarkdownRuntime(new DefaultMarkdown());
-          }
+    public function load($class) {
+      if (MarkdownRuntime::class === $class) {
+        return new MarkdownRuntime(new DefaultMarkdown());
       }
+    }
   });
 
   return $twig;

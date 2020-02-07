@@ -1,6 +1,69 @@
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+{% extends ('base/index.html') %}
+{% block content %}
+<header class="bg-gray py-3 border border-bottom border-dark-gray" role="masthead">
+  <div class="container-md d-flex flex-column flex-md-row flex-items-center flex-md-items-center">
+    <div class="col-2 d-flex flex-items-center flex-items-center flex-md-items-start">
+      <h1 class="text-mono pl-3">T.I.L.</h1>
+    </div>
+    <div class="col-10 d-flex flex-column flex-justify-center flex-items-center flex-md-items-start pl-md-4">
+      <p class="h4 text-gray text-normal mb-0">Interesting tidbits I think are worth sharing</p>
+      <a class="text-gray text-small" href="#url">https://nfreader.net/TIL</a>
+    </div>
+  </div>
+</header>
+
+<main role="main">
+  <section class="container-md clearfix">
+    <h2 class="my-3 pl-3">Things I've Learned</h2>
+    <div class="Box mb-3">
+      <div class="Box-body">
+        <div class="d-flex flex-items-center">
+          <div>
+            <span class="f1 text-gray-light mr-2"><a class="link-gray-dark" href="#">69</a></span>
+          </div>
+          <div>
+            <h2 class="Box-title"><a class="link-gray-dark" href="#">Difference between MySQL's TIMESTAMP and DATETIME Column Types</a></h2>
+            <small class="text-gray-light"><a class="link-gray" href="#">Posted 5 hours ago</a></small>
+          </div>
+        </div>
+        <hr>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+      </div>
+      <div class="Box-footer text-right bg-blue-light">
+        <a href="#">Source</a> (Via <a href="#">Twitter</a>)
+      </div>
+    </div>
+    <div class="Box mb-3">
+      <div class="Box-body">
+        <div class="d-flex flex-items-center">
+          <div>
+            <span class="f1 text-gray-light mr-2"><a class="link-gray-dark" href="#">420</a></span>
+          </div>
+          <div>
+            <h2 class="Box-title"><a class="link-gray-dark" href="#">GitHub's Frontend CSS is Called Primer and It's Awesome</a></h2>
+            <small class="text-gray-light"><a class="link-gray" href="#">Posted 5 hours ago</a></small>
+          </div>
+        </div>
+        <hr>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+      </div>
+      <div class="Box-footer text-right bg-blue-light">
+        <a href="#">Source</a> (Via <a href="#">Twitter</a>)
+      </div>
+    </div>
+  </section>
+</main>
+
+{% endblock %}
