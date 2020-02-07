@@ -21,4 +21,9 @@ class TILController {
     return $this->view->render($response, 'home.twig');
   }
 
+  public function admin($request, $response, $args) {
+    return $this->view->render($response, 'admin/home.twig');
+  }
+
+
 }

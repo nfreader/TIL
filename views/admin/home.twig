@@ -1,0 +1,44 @@
+{% extends ('base/index.html') %}
+{% block content %}
+<header class="bg-gray py-3 border border-bottom border-dark-gray" role="masthead">
+  <div class="container-md d-flex flex-column flex-md-row flex-items-center flex-md-items-center">
+    <div class="col-2 d-flex flex-items-center flex-items-center flex-md-items-start">
+      <h1 class="text-mono pl-3">T.I.L.</h1>
+    </div>
+    <div class="col-10 d-flex flex-column flex-justify-center flex-items-center flex-md-items-start pl-md-4">
+      <p class="h4 text-gray text-normal mb-0">Interesting tidbits I think are worth sharing</p>
+      <a class="text-gray text-small" href="#url">https://nfreader.net/TIL</a>
+    </div>
+  </div>
+</header>
+
+<main role="main">
+  <section class="container-md clearfix">
+    <h2 class="my-3 pl-3">Things I've Learned <span class="text-red">ADMIN</span></h2>
+    <div class="Box">
+      <ul>
+        <li class="Box-row">
+          <a href="#">69 - Difference between MySQL's TIMESTAMP and DATETIME Column Types</a>
+        </li>
+        <li class="Box-row">
+          <a href="#">420 - GitHub's Frontend CSS is Called Primer and It's Awesome</a>
+        </li>
+      </ul>
+    </div>
+      <div class="Box">
+        <div class="Box-header">
+          <h3 class="Box-title">I learned a new thing</h3>
+        </div>
+        <div class="Box-body">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </div>
+    </div>
+  </section>
+</main>
+
+{% endblock %}
